@@ -67,7 +67,7 @@
                <button type="submit"  class="btn btn-info">Submit</button>
                
         </form>
-      <!--   <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
+       <!--  <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="userfile" id="userfile">
   
