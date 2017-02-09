@@ -90,6 +90,7 @@
 		<li class="activeZ fontHover"><a href="<?php echo base_url('admin/header') ?>">Header</a></li>
 		<li><a href="<?php echo base_url('admin/home_sec1') ?>">Home Section 1</a></li>
 		<li><a href="<?php echo base_url('admin/home_sec2') ?>">Home Section 2</a></li>
+		<li><a href="<?php echo base_url('admin/about_sec') ?>">About Section</a></li>
 		<!-- <li><a href="#">Link</a></li> -->
 		<li><a href="<?php echo base_url('admin/footer') ?>">Footer</a></li>
 	</ul>

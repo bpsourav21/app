@@ -24,6 +24,12 @@ class User_Model extends CI_Model {
         $query = $this->db->get('home_section2');
         return $query->row_array();
     }
+    function get_about_sec_data(){
+        //$lang= $this->session->userdata('language');
+        $this->db->select('*');
+        $query = $this->db->get('about_section1');
+        return $query->row_array();
+    }
     function get_footer_data() {
         //$lang= $this->session->userdata('language');
         $this->db->select('*');

@@ -16,6 +16,7 @@ class Welcome extends CI_Controller {
 	  	$data['fcon']		=	$this->user_model->get_footer_data();
 		$data['home_sec1']	=	$this->user_model->get_home_sec1_data();
 		$data['home_sec2']	=	$this->user_model->get_home_sec2_data();
+		
 		//$this->load->view('header',$data);
 		//$this->load->view('home');
 		//$this->load->view('admin_header',$data);
@@ -28,15 +29,17 @@ class Welcome extends CI_Controller {
 	public function about()
 	{ $data['hcon']		=	$this->user_model->get_header_data();
 	$data['fcon']		=	$this->user_model->get_footer_data();
+	$data['about_sec']	=	$this->user_model->get_about_sec_data();
 		
-		$data['maincontent']= $this->load->view('pages/about','',true);
+		$data['maincontent']= $this->load->view('pages/about',$data,true);
 		$this->load->view('masterview',$data);
 	}
 		public function services()
 	{ $data['hcon']		=	$this->user_model->get_header_data();
 	$data['fcon']		=	$this->user_model->get_footer_data();
 		
-		$data['maincontent']= $this->load->view('pages/services','',true);
+	$data['maincontent']= $this->load->view('pages/services','',true);
+	//$data['maincontent']= $this->load->view('pages/gallery','',true);
 		$this->load->view('masterview',$data);
 	}
 }

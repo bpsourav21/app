@@ -6,10 +6,16 @@
                     <input type="text" style="width: 45%;" class="form-control" name="Home_sec_title" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['Home_sec_title']; ?>" placeholder="Home Section Title">
               </div>
             
-              <div class="form-group" >
+              <!-- <div class="form-group" >
                     <label>Home Content Image 1</label>
                     <input type="text" style="width: 45%;" class="form-control" name="home_con_img1" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_img1']; ?>" placeholder="Home Content Image 1">
-              </div>
+              </div> -->
+
+            <!--   <div class="form-group" >
+                    <label>Home Content Image 1</label>
+                    <input type="file" style="width: 45%;" class="form-controls" name="userfile" >
+                    <input  type="submit" style="width: 45%;" class="form-controls" name="submit" value="Upload Image" >
+              </div> -->
  <div class="form-group" >
                     <label>Home Content Title 1</label>
                     <input type="text" style="width: 45%;" class="form-control" name="home_con_title1" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_title1']; ?>" placeholder="Home Content Title 1">
@@ -58,12 +64,13 @@
                     <input type="text" style="width: 45%;" class="form-control" name="home_con_dsc4" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_dsc4']; ?>" placeholder="Home Content Discription 4">
               </div>
 
-
-
-
-
-
                <button type="submit"  class="btn btn-info">Submit</button>
                
         </form>
+      <!--   <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
+    Select image to upload:
+    <input type="file" name="userfile" id="userfile">
+  
+    <input type="submit" value="Upload Image" name="submit">
+</form> -->
         </div>

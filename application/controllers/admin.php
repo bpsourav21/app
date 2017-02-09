@@ -38,6 +38,8 @@ class Admin extends CI_Controller {
 	
 	}
 
+	/*---------------------data fetching from nav bar------------------------------*/
+
 	public function header()
 	{
 		
@@ -59,6 +61,13 @@ class Admin extends CI_Controller {
 		 $data['subcontent']= $this->load->view('pages_admin/home_sec2_view',$data,true);
 		 $this->load->view('pages_admin/admin_master',$data);
 	}
+	public function about_sec()
+	{
+		
+		 $data['hcon']	=	$this->user_model->get_about_sec_data();
+		 $data['subcontent']= $this->load->view('pages_admin/about_view',$data,true);
+		 $this->load->view('pages_admin/admin_master',$data);
+	}
 	public function footer()
 	{
 		
@@ -68,6 +77,8 @@ class Admin extends CI_Controller {
 	}
 
 
+
+/*---------------------data fetching operation & changing database------------------------------*/
 	public function title_update()
 	{
 
@@ -97,6 +108,7 @@ class Admin extends CI_Controller {
 
 		redirect('admin/header');
 	}
+	/*--------------------home section------------------------------*/
 
 	public function home_sec1_update()
 	{
@@ -121,12 +133,15 @@ class Admin extends CI_Controller {
 	}
 	public function home_sec2_update()
 	{
+	
 		$home_sec2 = array(
 			'Home_sec_title' =>$this->input->post('Home_sec_title'),
-			'home_con_img1' =>$this->input->post('home_con_img1'),
-			'home_con_img2' =>$this->input->post('home_con_img2'),
-			'home_con_img3' =>$this->input->post('home_con_img3'),
-			'home_con_img4' =>$this->input->post('home_con_img4'),
+
+
+			//'home_con_img1' =>$this->input->post($target_path),
+			//'home_con_img2' =>$this->input->post('home_con_img2'),
+			//'home_con_img3' =>$this->input->post('home_con_img3'),
+			//'home_con_img4' =>$this->input->post('home_con_img4'),
 			'home_con_title1' =>$this->input->post('home_con_title1'),
 			'home_con_title2' =>$this->input->post('home_con_title2'),
 			'home_con_title3' =>$this->input->post('home_con_title3'),
@@ -138,11 +153,38 @@ class Admin extends CI_Controller {
 			
 			);
 		
-		$this->db->update('home_section2',$home_sec2);
+		$this->db->update('about_section1',$home_sec2);
 
-		redirect('admin/home_sec1');
+		redirect('admin/about_sec');
 	}
+	/*---------------------about section------------------------------*/
+	public function about_update()
+	{
+	
+		$about_sec = array(
+			//'about_sec_title' =>$this->input->post('about_sec_title'),
 
+
+			//'about_con_img1' =>$this->input->post($target_path),
+			//'about_con_img2' =>$this->input->post('about_con_img2'),
+			//'about_con_img3' =>$this->input->post('about_con_img3'),
+			//'about_con_img4' =>$this->input->post('about_con_img4'),
+			'about_con_title1' =>$this->input->post('about_con_title1'),
+			'about_con_title2' =>$this->input->post('about_con_title2'),
+			'about_con_title3' =>$this->input->post('about_con_title3'),
+			'about_con_title4' =>$this->input->post('about_con_title4'),
+			'about_con_dsc1' =>$this->input->post('about_con_dsc1'),
+			'about_con_dsc2' =>$this->input->post('about_con_dsc2'),
+			'about_con_dsc3' =>$this->input->post('about_con_dsc3'),
+			'about_con_dsc4' =>$this->input->post('about_con_dsc4')
+			
+			);
+		
+		$this->db->update('about_section1',$about_sec);
+
+		redirect('admin/about_sec');
+	}
+/*---------------------footer section------------------------------*/
 	public function footer_update()
 	{
 		$footer = array(
