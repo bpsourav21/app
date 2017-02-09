@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="<?php echo base_url('assets/css/animate.css');?>">
 	<link href="<?php echo base_url('assets/css/prettyPhoto.css');?>" rel="stylesheet">
 	<link href="<?php echo base_url('assets/css/style.css');?>" rel="stylesheet" />	
+     
       <style>
       h1.page-header {
     margin-top: -5px;
@@ -21,7 +22,9 @@
     padding-top: 15px;
     margin-top: -20px;
 }
+.fontHover:hover{
 
+}
 .footer {
     width: 100%;
 }  
@@ -84,11 +87,11 @@
 	<div class="container-fluid main-container">
 		<div class="col-md-2 sidebar">
 	<ul class="nav nav-pills nav-stacked ">
-		<li class="activeZ"><a href="<?php echo base_url('admin/header') ?>">Header</a></li>
+		<li class="activeZ fontHover"><a href="<?php echo base_url('admin/header') ?>">Header</a></li>
 		<li><a href="<?php echo base_url('admin/home_sec1') ?>">Home Section 1</a></li>
 		<li><a href="<?php echo base_url('admin/home_sec2') ?>">Home Section 2</a></li>
-		<li><a href="#">Link</a></li>
-		<li><a href="#">Footer</a></li>
+		<!-- <li><a href="#">Link</a></li> -->
+		<li><a href="<?php echo base_url('admin/footer') ?>">Footer</a></li>
 	</ul>
 		</div>
 		<div class="col-md-10 content">
@@ -104,7 +107,7 @@
 		</div>
 		<footer class="pull-left">
 			<p class="col-md-12">
-				<strong>© 2017 All Rights Reserved by <a href="#"> my company </a></strong>
+				<strong>© 2017 All Rights Reserved by <a href="#">RTSOFTBD </a></strong>
 			</p>
 		</footer>
 	</div>

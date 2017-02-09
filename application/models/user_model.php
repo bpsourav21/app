@@ -12,13 +12,6 @@ class User_Model extends CI_Model {
         return $query->row_array();
     }
 
-	function get_footer_data() {
-        //$lang= $this->session->userdata('language');
-        $this->db->select('*');
-        $query = $this->db->get('footer_item');
-        return $query->row_array();
-    }
-
 		function get_home_sec1_data() {
         //$lang= $this->session->userdata('language');
         $this->db->select('*');
@@ -29,6 +22,12 @@ class User_Model extends CI_Model {
         //$lang= $this->session->userdata('language');
         $this->db->select('*');
         $query = $this->db->get('home_section2');
+        return $query->row_array();
+    }
+    function get_footer_data() {
+        //$lang= $this->session->userdata('language');
+        $this->db->select('*');
+        $query = $this->db->get('footer_item');
         return $query->row_array();
     }
 		

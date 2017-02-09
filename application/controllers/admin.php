@@ -59,6 +59,13 @@ class Admin extends CI_Controller {
 		 $data['subcontent']= $this->load->view('pages_admin/home_sec2_view',$data,true);
 		 $this->load->view('pages_admin/admin_master',$data);
 	}
+	public function footer()
+	{
+		
+		 $data['hcon']	=	$this->user_model->get_footer_data();
+		 $data['subcontent']= $this->load->view('pages_admin/footer_view',$data,true);
+		 $this->load->view('pages_admin/admin_master',$data);
+	}
 
 
 	public function title_update()

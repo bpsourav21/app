@@ -66,7 +66,9 @@ body {
       <div class="wrapper">
     <form class="form-signin" action="<?php echo site_url('login/login_logic') ;?>" method="post">       
       <h2 class="form-signin-heading">Please login</h2>
+      <h4 class="form-signin-heading">Email ID</h4>
       <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+      <h4 class="form-signin-heading">Password</h4>
       <input type="password" class="form-control" name="password" placeholder="Password" required=""/>      
       <!--<label class="checkbox">
         <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
