@@ -143,4 +143,22 @@ class Admin extends CI_Controller {
 		redirect('admin/home_sec1');
 	}
 
+	public function footer_update()
+	{
+		$footer = array(
+			'foo_name' =>$this->input->post('foo_name'),
+			'foo_address' =>$this->input->post('foo_address'),
+			'foo_mobile1' =>$this->input->post('foo_mobile1'),
+			'foo_mobile2' =>$this->input->post('foo_mobile2'),
+			'foo_email1' =>$this->input->post('foo_email1'),
+			'foo_email2' =>$this->input->post('foo_email2'),
+			'foo_website' =>$this->input->post('foo_website'),
+			'foo_others' =>$this->input->post('foo_others')
+			);
+		
+		$this->db->update('footer_item',$footer);
+
+		redirect('admin/footer');
+	}
+
 }

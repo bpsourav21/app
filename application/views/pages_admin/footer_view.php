@@ -1,7 +1,7 @@
 <div>
 
 <h1>Footer items</h1>
-        <form action="<?php echo site_url('admin/menu_update');?>" method="post">
+        <form action="<?php echo site_url('admin/footer_update');?>" method="post">
             
       <div class="form-group" >
           <label for="webSiteTitle">Company Name</label>
