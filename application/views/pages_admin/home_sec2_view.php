@@ -11,11 +11,11 @@
                     <input type="text" style="width: 45%;" class="form-control" name="home_con_img1" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_img1']; ?>" placeholder="Home Content Image 1">
               </div> -->
 
-            <!--   <div class="form-group" >
+              <div class="form-group" >
                     <label>Home Content Image 1</label>
                     <input type="file" style="width: 45%;" class="form-controls" name="userfile" >
-                    <input  type="submit" style="width: 45%;" class="form-controls" name="submit" value="Upload Image" >
-              </div> -->
+                   <!--  <input  type="submit" style="width: 45%;" class="form-controls" name="submit" value="Upload Image" > -->
+              </div>
  <div class="form-group" >
                     <label>Home Content Title 1</label>
                     <input type="text" style="width: 45%;" class="form-control" name="home_con_title1" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_title1']; ?>" placeholder="Home Content Title 1">
@@ -67,10 +67,14 @@
                <button type="submit"  class="btn btn-info">Submit</button>
                
         </form>
-       <!--  <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
+        <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
     Select image to upload:
-    <input type="file" name="userfile" id="userfile">
+    <input type="file" name="userfile1" id="userfile">
+  <!-- 
+    <input type="submit" value="Upload Image" name="submit"> -->
+    Select image to upload:
+    <input type="file" name="userfile2" id="userfile">
   
     <input type="submit" value="Upload Image" name="submit">
-</form> -->
+</form>
         </div>

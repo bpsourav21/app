@@ -138,7 +138,7 @@ class Admin extends CI_Controller {
 			'Home_sec_title' =>$this->input->post('Home_sec_title'),
 
 
-			//'home_con_img1' =>$this->input->post($target_path),
+			//'home_con_img1' =>$this->image_update(),
 			//'home_con_img2' =>$this->input->post('home_con_img2'),
 			//'home_con_img3' =>$this->input->post('home_con_img3'),
 			//'home_con_img4' =>$this->input->post('home_con_img4'),
@@ -153,31 +153,63 @@ class Admin extends CI_Controller {
 			
 			);
 		
-		$this->db->update('about_section1',$home_sec2);
+		$this->db->update('home_section2',$home_sec2);
 
-		redirect('admin/about_sec');
+		redirect('admin/home_sec2');
 	}
-	// function image_update()
-	// {
-	// 	 $config['upload_path']   = './assets/'; 
- //         $config['allowed_types'] = 'gif|jpg|png'; 
- //         $config['max_size']      = 100; 
- //         $config['max_width']     = 1024; 
- //         $config['max_height']    = 768;  
- //         $this->load->library('upload', $config);
+
+
+	function image_update()
+	{
+		function get_image($userfile){
+			 $target_dir = "assets/images/";
+
+ if(isset($_FILES[$userfile])){
+      //$errors= array();
+      //$target_dir =realpath(dirname($_FILES[$userfile]));
+      $file_name = $_FILES[$userfile]['name'];
+      $file_size =$_FILES[$userfile]['size'];
+      $file_tmp =$_FILES[$userfile]['tmp_name'];
+      $file_type=pathinfo($file_name,PATHINFO_EXTENSION);
+      //$file_ext=strtolower(end(explode('.',$_FILES[$userfile]['tmp_name'])));
+      
+      $expensions= array("jpeg","jpg","png");
+      
+      if(in_array($file_type,$expensions)=== true){
+   
+         if($file_size < 1097152){
+         //echo $target_dir.$file_name;
+         	$mainpath= $target_dir.$file_name;
+         	return $mainpath;
+      }
+      else{
+         echo 'File size must be excately 2 MB';
+      }
+      }
+      else echo "extension not allowed, please choose a JPEG or PNG file.";
+      
+   }
+		}
+		$mainpath= get_image("userfile1");
+   $this->db->set('home_con_img1',$mainpath);
+		// $this->db->update('home_section2');
+		$mainpath= get_image("userfile2");
+   $this->db->set('home_con_img2',$mainpath);
+		$this->db->update('home_section2');
+
+// $img_array = array(
+// 			'home_con_img1' =>get_image("userfile1"),
+// 			'home_con_img2' =>get_image("userfile2"),
+// 			//'home_con_img3' =>get_image(),
+// 			//'home_con_img4' =>get_image()
 			
- //         if ( ! $this->upload->do_upload('userfile')) {
- //            $error = array('error' => $this->upload->display_errors()); 
- //            //$this->load->view('upload', $error); 
- //         }
-			
- //         else { 
- //            $data = array('upload_data' => $this->upload->data()); 
- //            echo $data;
- //           // $this->load->view('success', $data); 
- //         } 
- //      } 
-	// }
+// 			);
+		
+// 		$this->db->update('home_section2',$img_array);
+
+		redirect('admin/home_sec2');
+
+      } 
 
 
 	/*---------------------about section------------------------------*/
