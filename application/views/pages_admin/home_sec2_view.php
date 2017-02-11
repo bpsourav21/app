@@ -5,17 +5,9 @@
                     <label>Home Section Title </label>
                     <input type="text" style="width: 45%;" class="form-control" name="Home_sec_title" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['Home_sec_title']; ?>" placeholder="Home Section Title">
               </div>
-            
-              <!-- <div class="form-group" >
-                    <label>Home Content Image 1</label>
-                    <input type="text" style="width: 45%;" class="form-control" name="home_con_img1" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_img1']; ?>" placeholder="Home Content Image 1">
-              </div> -->
+          
 
-              <div class="form-group" >
-                    <label>Home Content Image 1</label>
-                    <input type="file" style="width: 45%;" class="form-controls" name="userfile" >
-                   <!--  <input  type="submit" style="width: 45%;" class="form-controls" name="submit" value="Upload Image" > -->
-              </div>
+             
  <div class="form-group" >
                     <label>Home Content Title 1</label>
                     <input type="text" style="width: 45%;" class="form-control" name="home_con_title1" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['home_con_title1']; ?>" placeholder="Home Content Title 1">
@@ -67,14 +59,29 @@
                <button type="submit"  class="btn btn-info">Submit</button>
                
         </form>
+        <h1>Home Section 2: Image </h1>
         <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="userfile1" id="userfile">
-  <!-- 
-    <input type="submit" value="Upload Image" name="submit"> -->
-    Select image to upload:
-    <input type="file" name="userfile2" id="userfile">
+    <div class="form-group" >
+            <label>Select Home Content Image 1</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile1" >
+      </div>
+      <div class="form-group" >
+            <label>Select Home Content Image 2</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile2" >
+      </div>
+      <div class="form-group" >
+            <label>Select Home Content Image 3</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile3" >
+      </div>
+      <div class="form-group" >
+            <label>Select Home Content Image 4</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile4" >
+           
+      </div>
+
+      <div class="form-group" >
   
-    <input type="submit" value="Upload Image" name="submit">
+            <input  type="submit" style="width: 20%;" class="form-controls" name="submit" value="Upload Image" >
+      </div>
 </form>
         </div>

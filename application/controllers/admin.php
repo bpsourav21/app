@@ -190,22 +190,22 @@ class Admin extends CI_Controller {
       
    }
 		}
-		$mainpath= get_image("userfile1");
-   $this->db->set('home_con_img1',$mainpath);
+		// $mainpath= get_image("userfile1");
+  //  $this->db->set('home_con_img1',$mainpath);
+		// // $this->db->update('home_section2');
+		// $mainpath= get_image("userfile2");
+  //  $this->db->set('home_con_img2',$mainpath);
 		// $this->db->update('home_section2');
-		$mainpath= get_image("userfile2");
-   $this->db->set('home_con_img2',$mainpath);
-		$this->db->update('home_section2');
 
-// $img_array = array(
-// 			'home_con_img1' =>get_image("userfile1"),
-// 			'home_con_img2' =>get_image("userfile2"),
-// 			//'home_con_img3' =>get_image(),
-// 			//'home_con_img4' =>get_image()
+$img_array = array(
+			'home_con_img1' =>get_image("userfile1"),
+			'home_con_img2' =>get_image("userfile2"),
+			'home_con_img3' =>get_image("userfile3"),
+			'home_con_img4' =>get_image("userfile4")
 			
-// 			);
+			);
 		
-// 		$this->db->update('home_section2',$img_array);
+		$this->db->update('home_section2',$img_array);
 
 		redirect('admin/home_sec2');
 
