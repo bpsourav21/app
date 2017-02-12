@@ -36,6 +36,14 @@ class User_Model extends CI_Model {
         $query = $this->db->get('footer_item');
         return $query->row_array();
     }
+
+      function get_gallery_all()
+    {
+        //$lang   =   $this->session->userdata('language');
+        $this->db->select('*');
+        $query = $this->db->get('tbl_gallery');
+        return $query->result_array();
+    }
 		
 }
 

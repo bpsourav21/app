@@ -109,6 +109,47 @@ class Admin extends CI_Controller {
 		redirect('admin/header');
 	}
 	/*--------------------home section------------------------------*/
+	function banner_update()
+	{
+		function get_image($userfile){
+			 $target_dir = "assets/images/";
+
+ if(isset($_FILES[$userfile])){
+      //$errors= array();
+      //$target_dir =realpath(dirname($_FILES[$userfile]));
+      $file_name = $_FILES[$userfile]['name'];
+      $file_size =$_FILES[$userfile]['size'];
+      $file_tmp =$_FILES[$userfile]['tmp_name'];
+      $file_type=pathinfo($file_name,PATHINFO_EXTENSION);
+      //$file_ext=strtolower(end(explode('.',$_FILES[$userfile]['tmp_name'])));
+      
+      $expensions= array("jpeg","jpg","png");
+      
+      if(in_array($file_type,$expensions)=== true){
+   
+         if($file_size < 1097152){
+         //echo $target_dir.$file_name;
+         	$mainpath= $target_dir.$file_name;
+         	return $mainpath;
+      }
+      else{
+         echo 'File size must be excately 2 MB';
+      }
+      }
+      else echo "extension not allowed, please choose a JPEG or PNG file.";
+      
+   }
+		}
+
+		$mainpath= get_image("userfile");
+   		$this->db->set('banner',$mainpath);
+	 	$this->db->update('home_section1');
+	
+
+
+		redirect('admin/home_sec1');
+
+      } 
 
 	public function home_sec1_update()
 	{

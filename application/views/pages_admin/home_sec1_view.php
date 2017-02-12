@@ -1,4 +1,16 @@
 <div>
+  <h1>Banner Change </h1>
+        <form action="<?php echo site_url('admin/banner_update'); ?>" method="post" enctype="multipart/form-data">
+    <div class="form-group" >
+            <label>Select banner</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile" >
+      </div>
+       <div class="form-group" >
+  
+            <input  type="submit" style="width: 20%;" class="form-controls" name="submit" value="Upload Image" >
+      </div>
+</form>
+
 <h1>Home Section 1</h1>
 <form action="<?php echo site_url('admin/home_sec1_update'); ?>" method="post">
               <div class="form-group" >

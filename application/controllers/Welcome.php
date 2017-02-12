@@ -37,9 +37,10 @@ class Welcome extends CI_Controller {
 		public function services()
 	{ $data['hcon']		=	$this->user_model->get_header_data();
 	$data['fcon']		=	$this->user_model->get_footer_data();
+	$data['gallery']		=	$this->user_model->get_gallery_all();
 		
-	$data['maincontent']= $this->load->view('pages/services','',true);
-	//$data['maincontent']= $this->load->view('pages/gallery','',true);
+	//$data['maincontent']= $this->load->view('pages/services','',true);
+	$data['maincontent']= $this->load->view('pages/gallery',$data,true);
 		$this->load->view('masterview',$data);
 	}
 }
