@@ -1,27 +1,28 @@
-<div class="span12">
-			<div class="tabbable tabs">
-			  <div class="tab-content label-primary">
-				<div class="tab-pane active" id="all">
-				<ul class="thumbnails">
+	<div class="container">
+            <div class="row">
+                <div class="portfolio-items">
+                    <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3">
+                        <div class="recent-work-wrap">
+                            
+                                    
 				<?php foreach ($gallery as $gal ) { ?>
-					<li class="span4">
-						<div class="thumbnail">
-								<div class="blockDtl">
+					
+						<div class="overlay">
+								<div class="recent-work-inner">
 									<h4><?php echo $gal['gtitle'] ;?></h4>
-									<a href="#">
-										<img src="<?php echo base_url().'assets/content/'.$gal['gphoto'] ;?>" alt="image" width="500px" style="height: 200px;"/>
+									<a href="preview">
+						<img  class="img-responsive" src="<?php echo base_url().'assets/content/'.$gal['gphoto'] ;?>" alt="image" width="500px" style="height: 200px;"/>
 									</a>
 									<p><?php echo $gal['gcontent'] ; ?> </p>
 								</div>
 						</div>
-					</li>
+				
 
 					<?php } ;?>
 
 				
-				</ul>
-					
-			</div>
 			
-			</div>
-			</div> <!-- /tabbable -->
+                    </div>
+                      </div>
+                        </div>
+                    </div>
