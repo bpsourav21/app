@@ -1,5 +1,5 @@
 <div>
-<h1>about Section 2</h1>
+<h1>About Section</h1>
 <form action="<?php echo site_url('admin/about_update'); ?>" method="post">
               <div class="form-group" >
                     <label>About Title </label>
@@ -67,10 +67,27 @@
                <button type="submit"  class="btn btn-info">Submit</button>
                
         </form>
-      <!--   <form action="<?php echo site_url('admin/image_update'); ?>" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="userfile" id="userfile">
+     <h1>Aboout Section Image </h1>
+        <form action="<?php echo site_url('admin/about_image_update'); ?>" method="post" enctype="multipart/form-data">
+    <div class="form-group" >
+            <label>About Section Image 1</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile1" >
+      </div>
+       <div class="form-group" >
+            <label>About Section Image 2</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile2" >
+      </div>
+       <div class="form-group" >
+            <label>About Section Image 3</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile3" >
+      </div>
+       <div class="form-group" >
+            <label>About Section Image 4</label>
+            <input type="file" style="width: 45%;" class="form-controls" name="userfile4" >
+      </div>
+       <div class="form-group" >
   
-    <input type="submit" value="Upload Image" name="submit">
-</form> -->
+            <input  type="submit" style="width: 20%;" class="form-controls" name="submit" value="Upload Image" >
+      </div>
+</form>
         </div>

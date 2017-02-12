@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2017 at 07:49 PM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 5.6.28
+-- Generation Time: Feb 12, 2017 at 05:30 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -29,19 +29,26 @@ SET time_zone = "+00:00";
 CREATE TABLE `about_section1` (
   `id` int(5) NOT NULL,
   `about_sec_title` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_img1` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_title1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_dsc1` varchar(600) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_img2` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_title2` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_dsc2` varchar(600) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_img3` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_title3` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_dsc3` varchar(600) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_img4` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_title4` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
-  `home_con_dsc4` varchar(600) COLLATE utf8_unicode_ci NOT NULL
+  `about_con_img1` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_title1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_dsc1` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_img2` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_title2` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_dsc2` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_img3` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_title3` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_dsc3` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_img4` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_title4` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `about_con_dsc4` varchar(1000) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `about_section1`
+--
+
+INSERT INTO `about_section1` (`id`, `about_sec_title`, `about_con_img1`, `about_con_title1`, `about_con_dsc1`, `about_con_img2`, `about_con_title2`, `about_con_dsc2`, `about_con_img3`, `about_con_title3`, `about_con_dsc3`, `about_con_img4`, `about_con_title4`, `about_con_dsc4`) VALUES
+(1, 'About', '', 'About company', 'Lorem ipsum dolor sit amepellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egett, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque ', '', 'Template built with', 'Lorem ipsum dolor sitpellentesque libero, Lorem ipsum dolor sitpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur eget amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia   pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur egetpellentesque libero, pulvinar tincidunt leo consectetur eget amet, consectetur adipiscing', '', 'About company', 'pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque ', '', 'Template built with', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia');
 
 -- --------------------------------------------------------
 
@@ -66,8 +73,9 @@ CREATE TABLE `footer_item` (
 --
 
 INSERT INTO `footer_item` (`id`, `foo_name`, `foo_address`, `foo_mobile1`, `foo_mobile2`, `foo_email1`, `foo_email2`, `foo_website`, `foo_others`) VALUES
-(1, 'Company Name', 'Adress lorem ipsum lorem ipsum lorem ipsum', '01111111111', '012222222', 'adfa@fadfa.com', 'fafdag@fadfa.com', 'www.mywebsite.com', 'aaaaaaa'),
-(1, 'Company Name', 'Adress lorem ipsum lorem ipsum lorem ipsum', '01111111111', '012222222', 'adfa@fadfa.com', 'fafdag@fadfa.com', 'www.mywebsite.com', 'aaaaaaa');
+(1, 'RTSOFTBD', 'Adress: Rampura Bonosree', '01717111111', '012222222', 'adfa@fadfa.com', 'fafdag@fadfa.com', 'www.mywebsite.com', 'aaaaaaa'),
+(1, 'RTSOFTBD', 'Adress: Rampura Bonosree', '01717111111', '012222222', 'adfa@fadfa.com', 'fafdag@fadfa.com', 'www.mywebsite.com', 'aaaaaaa'),
+(1, 'RTSOFTBD', 'Adress: Rampura Bonosree', '01717111111', '012222222', 'adfa@fadfa.com', 'fafdag@fadfa.com', 'www.mywebsite.com', 'aaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -92,8 +100,8 @@ CREATE TABLE `header_item` (
 --
 
 INSERT INTO `header_item` (`id`, `title1`, `title2`, `menu1`, `menu2`, `menu3`, `menu4`, `menu5`, `menu6`) VALUES
-(0, 'RTSOFT BD', 'my company', 'Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contacts'),
-(0, 'RTSOFT BD', 'my company', 'Home', 'About', 'Services', 'Portfolio', 'Blog', 'Contacts');
+(0, 'RTSOFT BD', 'RTSOFTBD a reknowned company', 'Home', 'About', 'Services', 'Blog', 'Portfolio', ''),
+(0, 'RTSOFT BD', 'RTSOFTBD a reknowned company', 'Home', 'About', 'Services', 'Blog', 'Portfolio', '');
 
 -- --------------------------------------------------------
 
@@ -103,6 +111,7 @@ INSERT INTO `header_item` (`id`, `title1`, `title2`, `menu1`, `menu2`, `menu3`, 
 
 CREATE TABLE `home_section1` (
   `id` int(5) NOT NULL,
+  `banner` varchar(600) COLLATE utf8_unicode_ci NOT NULL,
   `title1` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `home_heading1` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
   `home_heading2` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
@@ -121,9 +130,9 @@ CREATE TABLE `home_section1` (
 -- Dumping data for table `home_section1`
 --
 
-INSERT INTO `home_section1` (`id`, `title1`, `home_heading1`, `home_heading2`, `home_image`, `home_con_title1`, `home_con_dsc1`, `home_con_title2`, `home_con_dsc2`, `home_con_title3`, `home_con_dsc3`, `home_con_title4`, `home_con_dsc4`) VALUES
-(1, 'RTSOFT BD', 'Welcome to', 'lorem ipsum dadfa lorem ipsum dadfa lorem ipsum dadfa lorem ipsum dadfa lorem ipsum dadfa', '', 'Full Responsive', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Retina Ready', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Full Responsive', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Friendly Code', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.'),
-(1, 'RTSOFT BD', 'Welcome to', 'lorem ipsum dadfa lorem ipsum dadfa lorem ipsum dadfa lorem ipsum dadfa lorem ipsum dadfa', '', 'Full Responsive', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Retina Ready', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Full Responsive', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Friendly Code', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.');
+INSERT INTO `home_section1` (`id`, `banner`, `title1`, `home_heading1`, `home_heading2`, `home_image`, `home_con_title1`, `home_con_dsc1`, `home_con_title2`, `home_con_dsc2`, `home_con_title3`, `home_con_dsc3`, `home_con_title4`, `home_con_dsc4`) VALUES
+(1, 'assets/images/bg1.jpg', 'RTSOFT BD', 'Welcome to', 'This Is one of the most promising company', '', 'Full Responsive', 'Full Responsive Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Retina Ready', 'Retina Ready Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Full Controlable', 'akjdflkahfiohad fhaoifahfi anfhriut ydghdfiuyhgoi g', 'Friendly Code', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.'),
+(1, 'assets/images/bg1.jpg', 'RTSOFT BD', 'Welcome to', 'This Is one of the most promising company', '', 'Full Responsive', 'Full Responsive Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Retina Ready', 'Retina Ready Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.', 'Full Controlable', 'akjdflkahfiohad fhaoifahfi anfhriut ydghdfiuyhgoi g', 'Friendly Code', 'Quisque eu ante at tortor imperdiet gravida nec sed turpis phasellus.');
 
 -- --------------------------------------------------------
 
@@ -153,7 +162,7 @@ CREATE TABLE `home_section2` (
 --
 
 INSERT INTO `home_section2` (`id`, `Home_sec_title`, `home_con_img1`, `home_con_title1`, `home_con_dsc1`, `home_con_img2`, `home_con_title2`, `home_con_dsc2`, `home_con_img3`, `home_con_title3`, `home_con_dsc3`, `home_con_img4`, `home_con_title4`, `home_con_dsc4`) VALUES
-(1, 'Latest News', 'assets/images/5.jpg', 'Template built- 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ', 'assets/images/6.jpg', 'Template built- 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ', 'assets/images/5.jpg', 'Template built- 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ', '<href>', 'Template built- 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ');
+(1, 'Latest News', 'assets/images/5.jpg', 'Template built- 1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ', 'assets/images/6.jpg', 'Template built- 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ', 'assets/images/5.jpg', 'Template built- 3', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ', 'assets/images/6.jpg', 'Template built- 4', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus interdum erat libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia pellentesque libero, pulvinar tincidunt leo consectetur eget. Curabitur lacinia ');
 
 -- --------------------------------------------------------
 
@@ -177,6 +186,37 @@ CREATE TABLE `tbl_admin` (
 INSERT INTO `tbl_admin` (`admin_id`, `admin_name`, `admin_email`, `admin_password`, `admin_role`, `admin_status`) VALUES
 (1, 'admin', 'admin', 'admin', 1, 0),
 (2, 'super', 'super', 'super', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gallery`
+--
+
+CREATE TABLE `tbl_gallery` (
+  `id` int(10) NOT NULL,
+  `gtitle` varchar(20) NOT NULL,
+  `gphoto` varchar(50) NOT NULL,
+  `gcontent` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gallery`
+--
+
+INSERT INTO `tbl_gallery` (`id`, `gtitle`, `gphoto`, `gcontent`) VALUES
+(3, 'erer', '11.jpg', 'dldkmclkmdklms'),
+(4, 'dfdf', 'index.jpg', 'cdskclndkslnc ldnkldn'),
+(8, 'dfdsf', 'index2.jpg', 'dvdfv'),
+(11, 'dd', 'Picture-019-300x2251.jpg', 'dd'),
+(12, 'bbbbbb', '13cbaam_develop_12m_629799e.jpg', 'bbbbbbb'),
+(13, 'hkjhuirh iuhiu', 'imagesqqq1.jpg', 'uyrui uryiey hjfsdfjs '),
+(14, 'zzz', 'c.jpg', 'zz'),
+(15, 'ss', 'images.png', 'sss'),
+(16, 'zz', 'c1.jpg', 'zzz'),
+(17, 'zz', 'q.jpg', 'zz'),
+(18, 'dd', 'q1.jpg', 'dd'),
+(19, 'vv', 'q2.jpg', 'bbb');
 
 -- --------------------------------------------------------
 
@@ -213,6 +253,12 @@ ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`admin_id`);
 
 --
+-- Indexes for table `tbl_gallery`
+--
+ALTER TABLE `tbl_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_login`
 --
 ALTER TABLE `tbl_login`
@@ -227,6 +273,11 @@ ALTER TABLE `tbl_login`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `admin_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `tbl_gallery`
+--
+ALTER TABLE `tbl_gallery`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
