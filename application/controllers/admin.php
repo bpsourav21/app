@@ -12,11 +12,6 @@ class Admin extends CI_Controller {
 	
 	public function index()
 	{
-		// $data['subcontent']= $this->load->view('pages_admin/admin_view','',true);
-		//  $this->load->view('pages_admin/admin_master',$data);
-
-		//
-		//$this->load->view('pages_admin/admin_header',$data);
 
 		if ($this->login_model->is_logged_in()) 
 		{
@@ -26,13 +21,6 @@ class Admin extends CI_Controller {
 		else{
 			$this->load->view('login_view');
 		}
-		//$this->db->set('maintitle',$this->input->post('maintitle'));
-		//$this->db->update('header_item');
-
-		//redirect('admin_header');
-		// $data['hcon']	=	$this->user_model->get_header_data();
-		// 	 $data['subcontent']= $this->load->view('admin_view',true);
-		// 	$this->load->view('admin_header',$data);
 		
 		
 	
@@ -68,6 +56,12 @@ class Admin extends CI_Controller {
 		 $data['subcontent']= $this->load->view('pages_admin/about_view',$data,true);
 		 $this->load->view('pages_admin/admin_master',$data);
 	}
+	public function show_gallery () {
+		$data['glists'] = $this->user_model->get_gallery_all();
+		 $data['subcontent']= $this->load->view('pages_admin/gallery_view',$data,true);
+		 $this->load->view('pages_admin/admin_master',$data);
+	}
+
 	public function footer()
 	{
 		
@@ -178,11 +172,6 @@ class Admin extends CI_Controller {
 		$home_sec2 = array(
 			'Home_sec_title' =>$this->input->post('Home_sec_title'),
 
-
-			//'home_con_img1' =>$this->image_update(),
-			//'home_con_img2' =>$this->input->post('home_con_img2'),
-			//'home_con_img3' =>$this->input->post('home_con_img3'),
-			//'home_con_img4' =>$this->input->post('home_con_img4'),
 			'home_con_title1' =>$this->input->post('home_con_title1'),
 			'home_con_title2' =>$this->input->post('home_con_title2'),
 			'home_con_title3' =>$this->input->post('home_con_title3'),
@@ -258,13 +247,7 @@ $img_array = array(
 	{
 	
 		$about_sec = array(
-			//'about_sec_title' =>$this->input->post('about_sec_title'),
 
-
-			//'about_con_img1' =>$this->input->post($target_path),
-			//'about_con_img2' =>$this->input->post('about_con_img2'),
-			//'about_con_img3' =>$this->input->post('about_con_img3'),
-			//'about_con_img4' =>$this->input->post('about_con_img4'),
 			'about_con_title1' =>$this->input->post('about_con_title1'),
 			'about_con_title2' =>$this->input->post('about_con_title2'),
 			'about_con_title3' =>$this->input->post('about_con_title3'),
@@ -326,6 +309,144 @@ $img_array = array(
 		redirect('admin/home_sec2');
 
       } 
+
+
+
+/*---------------------gallery section------------------------------*/
+
+
+	public function show_gallery_edit($id) {
+		$data['galleryinfos'] = $this->user_model->get_gallery_data($id);
+		 $data['subcontent']= $this->load->view('pages_admin/gallery_view_edit',$data,true);
+		 $this->load->view('pages_admin/admin_master',$data);
+	}
+
+      public function show_gallery_update($id) {
+		$data = array (
+			'gtitle' =>$this->input->post('gtitle'),
+			'gphoto' =>$this->input->post('gphoto'),
+			'gcontent'=>$this->input->post('gcontent'));
+
+		if($_FILES["userfile"] !='')
+			  	{
+					if($_FILES["userfile"])
+						{
+							if($_FILES["userfile"]['name']!='')
+							{
+								$path = "./assets/content/";
+								
+								$config['upload_path'] 		  = 	 $path;
+								$config['allowed_types'] 	  = 	'*';
+								$config['max_size']		      = 	'1000';
+								$config['max_width']  		  = 	'2000';
+								$config['max_height']  		  = 	'2000';
+								$this->upload->initialize( $config );
+			
+								if ( ! $this->upload->do_upload() )
+								{
+									$this->session->set_flashdata('warning',  $this->upload->display_errors() );
+									redirect('admin/gallery_view_edit',$id);
+								}
+								else
+								{
+									$image_info = $this->upload->data();
+									$data['gphoto']	= $image_info['file_name'];
+								}
+							}
+						}
+			  	};
+				
+				$update_id['id'] 	=	$this->uri->segment( 3,0 );
+				$this->db->select('gphoto');
+				$this->db->from("tbl_gallery");
+				$this->db->where( $update_id );
+				$res = $this->db->get();
+
+				if($res->num_rows()>0)
+				{
+					$result = $res->row();
+					
+					/*echo $path."/".$result->img_name;
+						die();
+					*/
+					
+					if(file_exists($path."/".$result->logo))
+					{
+						unlink($path."/".$result->logo);
+					}							
+				}
+
+		$this->db->where('id', $id);
+		$this->db->update('tbl_gallery', $data);
+		redirect('admin/show_gallery');
+	} 
+	public function gallery_insert() {
+		$data = array (
+			'gtitle' 	 => $this->input->post('gtitle'),
+			'gcontent'   =>$this->input->post('gcontent'),
+			'gphoto'	 =>$this->input->post('gphoto')
+			);
+
+		if($_FILES["userfile"] !='')
+			  	{
+					if($_FILES["userfile"])
+						{
+							if($_FILES["userfile"]['name']!='')
+							{
+								$path = "./assets/content/";
+								
+								$config['upload_path'] 		  = 	 $path;
+								$config['allowed_types'] 	  = 	'*';
+								$config['max_size']		      = 	'1000';
+								$config['max_width']  		  = 	'2000';
+								$config['max_height']  		  = 	'2000';
+								$this->upload->initialize( $config );
+			
+								if ( ! $this->upload->do_upload() )
+								{
+									$this->session->set_flashdata('warning',  $this->upload->display_errors() );
+									redirect('admin/show_gallery');
+								}
+								else
+								{
+									$image_info = $this->upload->data();
+									$data['gphoto']	= $image_info['file_name'];
+								}
+							}
+						}
+			  	};
+				
+				$update_id['id'] 	=	$this->uri->segment( 3,0 );
+				$this->db->select('gphoto');
+				$this->db->from("tbl_gallery");
+				$this->db->where( $update_id );
+				$res = $this->db->get();
+
+				if($res->num_rows()>0)
+				{
+					$result = $res->row();
+					
+					/*echo $path."/".$result->img_name;
+						die();
+					*/
+					
+					if(file_exists($path."/".$result->logo))
+					{
+						unlink($path."/".$result->logo);
+					}							
+				}
+
+
+		$this->user_model->insert_gallery($data);
+		redirect('admin/show_gallery');
+	}
+
+	public function gallery_delete($id)
+ 	{
+		$this->db->where('id',$id);
+		$this->db->delete('tbl_gallery');
+		redirect('admin/show_gallery');
+	}
 /*---------------------footer section------------------------------*/
 	public function footer_update()
 	{
@@ -337,12 +458,19 @@ $img_array = array(
 			'foo_email1' =>$this->input->post('foo_email1'),
 			'foo_email2' =>$this->input->post('foo_email2'),
 			'foo_website' =>$this->input->post('foo_website'),
-			'foo_others' =>$this->input->post('foo_others')
+			'foo_others' =>$this->input->post('foo_others'),
+			'foo_fb' =>$this->input->post('foo_fb'),
+			'foo_twiter' =>$this->input->post('foo_twiter'),
+			'foo_linkedin' =>$this->input->post('foo_linkedin'),
+			'foo_gmail' =>$this->input->post('foo_gmail'),
+			'foo_youtube' =>$this->input->post('foo_youtube'),
+			'foo_behance' =>$this->input->post('foo_behance'),
+			'foo_dribble' =>$this->input->post('foo_dribble'),
 			);
 		
 		$this->db->update('footer_item',$footer);
 
-		redirect('admin/about_sec');
+		redirect('admin/footer_sec');
 	}
 
 }

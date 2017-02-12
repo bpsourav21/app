@@ -19,6 +19,21 @@
 				
 				<h2><?php echo $about_sec['about_con_title2']; ?></h2>
 				<img src="<?php echo base_url($about_sec['about_con_img2'])?>" class="img-responsive"/>
-				<p><?php echo $about_sec['about_con_dsc2']; ?></div>
+				<p><?php echo $about_sec['about_con_dsc2']; ?>
+				</div>
+				<div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms" >
+		
+				<h2><?php echo $about_sec['about_con_title3']; ?></h2>
+				<img src="<?php echo base_url($about_sec['about_con_img3'])?>" class="img-responsive"/>
+				<p><?php echo $about_sec['about_con_dsc3']; ?></p>
+			</div>
+			
+			<div class="col-md-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms" >
+				
+				<h2><?php echo $about_sec['about_con_title4']; ?></h2>
+				<img src="<?php echo base_url($about_sec['about_con_img4'])?>" class="img-responsive"/>
+				<p><?php echo $about_sec['about_con_dsc4']; ?></div>
 		</div>
-	</div>
+		
+		</div>
+	

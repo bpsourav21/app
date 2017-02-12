@@ -36,10 +36,10 @@
 							<ul class="nav nav-tabs" role="tablist">
 								<li role="presentation"><a href="<?php echo base_url() ?>" class="activeZ"><?php echo $hcon['menu1']; ?></a></li>
 								<li role="presentation"><a href="<?php echo base_url('welcome/about') ?>"><?php echo $hcon['menu2']; ?></a></li>
-								<li role="presentation"><a href=<?php echo base_url('welcome/services') ?>><?php echo $hcon['menu3']; ?></a></li>								
-								<li role="presentation"><a href="portfolio.html"><?php echo $hcon['menu4']; ?></a></li>
-								<li role="presentation"><a href="blog.html"><?php echo $hcon['menu5']; ?></a></li>
-								<li role="presentation"><a href="contact.html"><?php echo $hcon['menu6']; ?></a></li>						
+								<li role="presentation"><a href="<?php echo base_url('welcome/gallery') ?>"><?php echo $hcon['menu3']; ?></a></li>								
+								<li role="presentation"><a href="<?php echo base_url('welcome/services') ?>"><?php echo $hcon['menu4']; ?></a></li>
+								<li role="presentation"><a href="#"><?php echo $hcon['menu5']; ?></a></li>
+								<li role="presentation"><a href="#"><?php echo $hcon['menu6']; ?></a></li>						
 							</ul>
 						</div>
 					</div>						
@@ -57,11 +57,11 @@
 				<div class="social-icon">
 					<div class="col-md-4 sm-4">
 						<ul class="social-network">
-							<li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-							<li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+							<li><a href="http://<?php echo $fcon['foo_fb'];?>" target="_blank" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="http://<?php echo $fcon['foo_twiter']; ?>" target="_blank" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="http://<?php echo $fcon['foo_gmail']; ?>" target="_blank" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+							<li><a href="http://<?php echo $fcon['foo_linkedin']; ?>" target="_blank" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="http://<?php echo $fcon['foo_youtube']; ?>" target="_blank" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
 						</ul>	
 					</div>
 				</div>
