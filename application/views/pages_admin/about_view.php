@@ -87,7 +87,7 @@
       </div>
        <div class="form-group" >
   
-            <input  type="submit" style="width: 20%;" class="form-controls" name="submit" value="Upload Image" >
+            <input  type="submit" style="width: 20%;" class="form-controls" name="submit" value="Upload Images" >
       </div>
 </form>
         </div>

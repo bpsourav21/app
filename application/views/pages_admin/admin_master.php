@@ -91,6 +91,7 @@
 		<li><a href="<?php echo base_url('admin/home_sec1') ?>">Home Section 1</a></li>
 		<li><a href="<?php echo base_url('admin/home_sec2') ?>">Home Section 2</a></li>
 		<li><a href="<?php echo base_url('admin/about_sec') ?>">About Section</a></li>
+		<li><a href="<?php echo base_url('admin/show_gallery') ?>">Gallery Section</a></li>
 		<!-- <li><a href="#">Link</a></li> -->
 		<li><a href="<?php echo base_url('admin/footer') ?>">Footer</a></li>
 	</ul>
@@ -108,7 +109,7 @@
 		</div>
 		<footer class="pull-left">
 			<p class="col-md-12">
-				<strong>© 2017 All Rights Reserved by <a href="#">RTSOFTBD </a></strong>
+				<strong>© 2017 All Rights Reserved by <a href="#">bootstrap template </a></strong>
 			</p>
 		</footer>
 	</div>

@@ -44,6 +44,16 @@ class User_Model extends CI_Model {
         $query = $this->db->get('tbl_gallery');
         return $query->result_array();
     }
+     function get_gallery_data($id) {
+        $this->db->select('*');
+        $this->db->where('id', $id);
+        $result = $this->db->get('tbl_gallery');
+        return $result->row_array();
+    }
+    function insert_gallery($data) {
+        return $this->db->insert('tbl_gallery', $data);
+    }
+
 		
 }
 

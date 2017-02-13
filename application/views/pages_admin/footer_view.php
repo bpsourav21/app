@@ -36,6 +36,36 @@
           <label for="webSiteTitle">Others</label>
           <input type="text" style="width: 45%;" class="form-control" name="foo_others" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_others']; ?>" placeholder="Others">
     </div>
+     <div class="form-group" >
+          <label for="webSiteTitle">Facebook</label>
+          <input type="text" style="width: 45%;" class="form-control" name="foo_fb" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_fb']; ?>" placeholder="Facebook">
+    </div>
+     <div class="form-group" >
+          <label for="webSiteTitle">Twitter</label>
+          <input type="text" style="width: 45%;" class="form-control" name="foo_twiter" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_twiter']; ?>" placeholder="Twitter">
+    </div>
+
+ <div class="form-group" >
+          <label for="webSiteTitle">Linkedin</label>
+          <input type="text" style="width: 45%;" class="form-control" name="foo_linkedin" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_linkedin']; ?>" placeholder="Linkedin">
+    </div>
+
+ <div class="form-group" >
+          <label for="webSiteTitle">Google+</label>
+          <input type="text" style="width: 45%;" class="form-control" name="foo_gmail" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_gmail']; ?>" placeholder="Google+">
+    </div>
+
+ <div class="form-group" >
+          <label for="webSiteTitle">Behance</label>
+          <input type="text" style="width: 45%;" class="form-control" name="foo_behance" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_behance']; ?>" placeholder="Behance">
+    </div>
+
+ <div class="form-group" >
+          <label for="webSiteTitle">Dribble</label>
+          <input type="text" style="width: 45%;" class="form-control" name="foo_dribble" id="" aria-describedby="websiteTitle" value="<?php echo $hcon['foo_dribble']; ?>" placeholder="Dribble">
+    </div>
+
+
 
 
 
