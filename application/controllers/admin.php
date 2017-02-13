@@ -470,7 +470,11 @@ $img_array = array(
 		
 		$this->db->update('footer_item',$footer);
 
+<<<<<<< HEAD
 		redirect('admin/footer');
+=======
+		redirect('admin/footer_sec');
+>>>>>>> origin
 	}
 
 }
